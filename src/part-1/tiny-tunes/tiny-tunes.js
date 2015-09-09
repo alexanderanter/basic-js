@@ -75,7 +75,7 @@ exports.middleCharacter = function(word) {
 };
 
 /**
- * This function finds and return a hash tag in a string. If no hash tag is provided
+ * This function finds and returns a hash tag in a string. If no hash tag is provided
  * a empty string is returned.
  * Ex. "Hello! #cheers" will return "cheers"
  * Ex. "I'm doing great #success! will return "success!"
