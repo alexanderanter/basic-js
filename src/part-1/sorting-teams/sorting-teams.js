@@ -8,6 +8,7 @@
 var SortingTeams = (function() {
     "use strict";
 
+    // let node.js help us with reading from filesystem
     var path = require("path");
     var fileSystem = require("fs");
 
@@ -28,8 +29,9 @@ var SortingTeams = (function() {
          * @returns { Array.<{name: String, nickname: String, points: Number}> }
          */
         sortTeams: function() {
+            // TODO: Write your code here! Use the debugger to check what readTeamsFromFile returns
+            var fileContent = SortingTeams.readTeamsFromFile();
 
-            // TODO: Write your code here!
         }
 
     };

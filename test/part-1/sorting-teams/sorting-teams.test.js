@@ -34,7 +34,7 @@ describe("SortingTeams.sortTeams()", function() {
             },
         {
             "name": "Arsenal",
-            "nickname": "The gunners",
+            "nickname": "The Gunners",
             "points": 2
         }
         ];
