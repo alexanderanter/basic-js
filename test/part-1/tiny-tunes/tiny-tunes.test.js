@@ -174,7 +174,7 @@ describe("Test robberLanguageEncrypter()", function() {
 });
 
 describe("Test makeURL()", function() {
-    it("makeURL(\"lnu.se\", \"program/webbprogrammerare\", true, 8080) should" +
+    it("makeURL(\"lnu.se\", \"/program/webbprogrammerare\", true, 8080) should" +
         " return \"https://lnu.se:8080/program/webbprogrammerare/\"", function(done) {
 
         expect(t.makeURL("lnu.se", "/program/webbprogrammerare", true, 8080))
@@ -185,7 +185,7 @@ describe("Test makeURL()", function() {
     });
 
 
-    it("makeURL(\"lnu.se\", \"program/webbprogrammerare\", false) should" +
+    it("makeURL(\"lnu.se\", \"/program/webbprogrammerare\", false) should" +
         " return \"http://lnu.se/program/webbprogrammerare/\"", function(done) {
         expect(t.makeURL("lnu.se", "/program/webbprogrammerare", false))
             .to.eql("http://lnu.se/program/webbprogrammerare/");
@@ -193,7 +193,7 @@ describe("Test makeURL()", function() {
 
     });
 
-    it("makeURL(\"lnu.se\", \"program/webbprogrammerare\") should" +
+    it("makeURL(\"lnu.se\", \"/program/webbprogrammerare\") should" +
         " return \"https://lnu.se:8080/program/webbprogrammerare/\"", function(done) {
         expect(t.makeURL("lnu.se", "/program/webbprogrammerare"))
             .to.eql("http://lnu.se/program/webbprogrammerare/");
@@ -228,14 +228,14 @@ describe("Test makeURL()", function() {
         done();
     });
 
-    it("makeURL('lnu.se', 'program/webbprogrammerare', 'blaj') should" +
+    it("makeURL('lnu.se', '/program/webbprogrammerare', 'blaj') should" +
         " return \"Incorrect parameters\"", function(done) {
         expect(t.makeURL("lnu.se", "webbprogrammerare", "blaj"))
             .to.eql("Incorrect parameters");
         done();
     });
 
-    it("makeURL('lnu.se', 'program/webbprogrammerare', true, 'blaj') should" +
+    it("makeURL('lnu.se', '/program/webbprogrammerare', true, 'blaj') should" +
         " return \"Incorrect parameters\"", function(done) {
         expect(t.makeURL("lnu.se", "webbprogrammerare", true, "blaj"))
             .to.eql("Incorrect parameters");
