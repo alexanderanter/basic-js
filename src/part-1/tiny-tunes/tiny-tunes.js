@@ -180,7 +180,7 @@ exports.robberLanguageEncrypter = function(phrase) {
  * The function check that all parameters är valid data type and
  * concats a valid URL of the parameters ex.
  * domain = "lnu.se"
- * page = "program/webbprogrammerare"
+ * path = "program/webbprogrammerare"
  * isSecure = true (sets https if true otherwise http)
  * port = 8080
  * => https://lnu.se:8080/program/webbprogrammerare
