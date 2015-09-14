@@ -1,5 +1,5 @@
 ## Sorting teams
-Nivå: B
+Nivå: A
 
 Denna uppgiften går ut på att sortera en Array innehållande objekt.
 Uppgiften läser in en så kallad json-fil (JavaScript Object Notation - http://json.org/).
@@ -11,7 +11,7 @@ på att få en Array innehållandes dess objekt och sortera dessa med avsende p�
 ```
 var arr = [
     {name: "Arsenal", nickname: "The Gunners", points: 1},
-    {name: "Tottenhamn Hotspurs FC", nickname: "Spurs", points: 20},
+    {name: "Tottenhamn Hotspur FC", nickname: "Spurs", points: 20},
     {name: "Liverpool", nickname: "The reds", points: 10}
 ];
 
@@ -20,7 +20,7 @@ var sortedArray = SortingTeams.sortTeams(arr);
 // sortedArray should be
 /*
 [
-    {name: "Tottenhamn Hotspurs FC", nickname: "Spurs", points: 20},
+    {name: "Tottenhamn Hotspur FC", nickname: "Spurs", points: 20},
     {name: "Liverpool", nickname: "The reds", points: 10},
     {name: "Arsenal", nickname: "The Gunners", points: 1}
 ]
