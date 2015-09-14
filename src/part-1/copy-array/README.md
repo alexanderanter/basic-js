@@ -8,7 +8,7 @@ lägga på numret i slutet av kopian. Kopian ska sedan returneras.
 
 Du ska också göra viss felkontroll på de inkommande varaiblerna. Första variablen ska vara en Array och den andra av
 datatypen Number. Är detta inte fallet ska ett TypeError exception kastas.
-Är första parametern en tom Arrat ska ett vanligt Error kastas.
+Är första parametern en tom array ska ett vanligt Error kastas.
 
 ```
 var arr = [1, 2, 3];
