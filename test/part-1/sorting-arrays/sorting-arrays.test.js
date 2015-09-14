@@ -20,8 +20,17 @@ describe("SortingArrays.sortAscending()", function() {
         done();
     });
 
-    it("SortingArrays.sortAscending([2, 3, 6, 1, 4])", function(done) {
-        expect(sa.sortAscending([2, 3, 6, 1, 4])).to.eql([1, 2, 3, 4, 6]);
+
+    it("SortingArrays.sortAscending([2, 3]) should not modify the parameter reference", function(done) {
+        var arr = [4, 2, 3];
+        var resArr = sa.sortAscending(arr);
+        expect(resArr).to.not.eql(arr);
+        done();
+    });
+
+
+    it("SortingArrays.sortAscending([2, 30, 6, 1, 4])", function(done) {
+        expect(sa.sortAscending([2, 30, 6, 1, 4])).to.eql([1, 2, 4, 6, 30]);
         done();
     });
 
@@ -49,8 +58,15 @@ describe("SortingArrays.sortDescending", function() {
         done();
     });
 
-    it("SortingArrays.sortDescending([2, 3, 6, 1, 4])", function(done) {
-        expect(sa.sortDescending([2, 3, 6, 1, 4])).to.eql([6, 4, 3, 2, 1]);
+    it("SortingArrays.sortDescending([4, 2, 3]) should not modify the parameter reference", function(done) {
+        var arr = [4, 20, 3];
+        var resArr = sa.sortDescending(arr);
+        expect(resArr).to.not.eql(arr);
+        done();
+    });
+
+    it("SortingArrays.sortDescending([2, 30, 6, 1, 4])", function(done) {
+        expect(sa.sortDescending([2, 30, 6, 1, 4])).to.eql([30, 6, 4, 2, 1]);
         done();
     });
 
