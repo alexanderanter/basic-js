@@ -22,7 +22,7 @@ describe("Tests for makeStartTag", function() {
         done();
     });
 
-    it("makeHtml.startElement(\"p\") should return \"<div>\"", function(done) {
+    it("makeHtml.startElement(\"div\") should return \"<div>\"", function(done) {
         expect(mh.makeStartTag("div")).to.eql("<div>");
         done();
     });
