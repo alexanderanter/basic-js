@@ -6,10 +6,10 @@ För att träna på att skapa objekt med hjälp av olika designmönster så ska 
 - (file: lego-part3.js) Här skapar du objekt med Constructor/Prototype Pattern
 
 Objekten som ska skapas ska ha följande egenskaper:
-- x (antal legopluppar i x-led)
-- x (antal legopluppar i y-led)
-- z (antal legopluppar i z-led)
-- color (färg angiven som en sträng "red", "blue" etc.)
+- x (antal legopluppar i x-led) Om inget värde anges ska x = 2
+- x (antal legopluppar i y-led) Om inget värde anges ska y = 4
+- z (antal legopluppar i z-led) Om inget värde anges ska z = 2
+- color (färg angiven som en sträng "red", "blue" etc.) Om inget värde anges ska color = "red"
 
 Objekten som ska skapas ska ha följande metoder:
 - toString (ger en strängrepresentation av legobiten "® ® ® ®\\n® ® ® ®" för en bit som är x=4 och y=2)
