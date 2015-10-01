@@ -8,7 +8,7 @@ Du ska komplettera filen CarA.js med kod som gör det möjligt att instansiera o
 ###Egenskaper
 - _petName_, som håller ordning på smeknamnet. Standardvärdet ska vara __Skrotbilen__ om inget annat anges vid instansiering av nya objekt.
 
-- _speed_, vars värde är bilens aktuella hastighet. Standardvärdet ska vara __0__ för nya instanser.
+- _speed_, vars värde är bilens aktuella hastighet. Värdet ska vara __0__ för nya instanser.
 
 ###Metoder
 
