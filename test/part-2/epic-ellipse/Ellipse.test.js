@@ -22,12 +22,12 @@ describe("Ellipse - Using public properties (file: Ellipse.js)", function() {
     });
 
     describe("Constructor", function() {
-        it("should set the property a to 13.8", function() {
+        it("should set the property a to 11.7", function() {
             var ellipse = new Ellipse(11.7, 42.4);
             expect(ellipse).to.have.property("a", 11.7);
         });
 
-        it("should set the property b to 58.9.8", function() {
+        it("should set the property b to 58.9", function() {
             var ellipse = new Ellipse(3.8, 58.9);
             expect(ellipse).to.have.property("b", 58.9);
         });
