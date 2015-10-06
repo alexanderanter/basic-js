@@ -59,15 +59,16 @@ describe("Ellipse - Using public properties (file: Ellipse.js)", function() {
                     ellipse.a = "not a number";
                 }).to.throw(Error);
             });
-        });
 
-        describe("b", function() {
-            it("should set the property b to 123 when a is the string \"123\"", function() {
+            it("should set the property a to 123 when a is the string \"123\"", function() {
                 var ellipse = new Ellipse(0, 0);
                 ellipse.a = "123";
                 expect(ellipse).to.have.property("a", 123);
             });
 
+        });
+
+        describe("b", function() {
             it("should set the property b to 58.9", function() {
                 var ellipse = new Ellipse(3.8, 58.9);
                 expect(ellipse).to.have.property("b", 58.9);
@@ -93,10 +94,10 @@ describe("Ellipse - Using public properties (file: Ellipse.js)", function() {
                 }).to.throw(Error);
             });
 
-            it("should set the property b to 123 when a is the string \"123\"", function() {
+            it("should set the property b to 123 when b is the string \"123\"", function() {
                 var ellipse = new Ellipse(0, 0);
-                ellipse.a = "123";
-                expect(ellipse).to.have.property("a", 123);
+                ellipse.b = "123";
+                expect(ellipse).to.have.property("b", 123);
             });
         });
     });
