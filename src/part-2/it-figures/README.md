@@ -4,9 +4,9 @@ Du ska skriva tre konstruktorfunktioner som skapar objekt av typen Ellipse eller
 
 I samband med att objekt skapas av respektive typ ska det vara möjlight att ange figurens längd och bredd.  
 
-En ellipse area kan bestämmas med `Math.PI * length / 2 * length / 2`, och dess omkrets approximativt med `Math.PI * Math.sqrt(length * length / 2 + height * height / 2)`.
+En ellipse area kan bestämmas med `Math.PI * length / 2 * height / 2`, och dess omkrets approximativt med `Math.PI * Math.sqrt(length * length / 2 + height * height / 2)`.
 
-En rektangels area kan bestämmas med `length * height`, och dess omkrets med `2 * length + 2 * length`.
+En rektangels area kan bestämmas med `length * height`, och dess omkrets med `2 * length + 2 * height`.
 
 Du ska komplettera filen Shape.js med kod för de tre typer som gör det möjligt att instansiera objekt av typerna Ellipse och Rectangle.
 
@@ -14,11 +14,11 @@ Samtliga medlemmar ska vara publika och metoder ska vara kopplade till respektiv
 
 ##Typen Shape
 
-Konstruktorn ska ha två parametrar, `length` och `heigth`.
+Konstruktorn ska ha två parametrar, `length` och `height`.
 
 ###Egenskaper
 - `length`, figurens längd.
-- `heigth`, figurens bredd.
+- `height`, figurens bredd.
 
 ###Metoder
 - `toString`, ska returnera en sträng representerande ett objekt. Skapas ett Ellipse-objekt med längden 12 och höjden 19,4, ska strängen, där arean respektive omkretsen ska avrundas till en decimal, `längd: 12, höjd: 19.4, omkrets: 50.7, area: 182.8` returneras. Ett Rectangle-objekt med länged 63 och bredden 18.4 ska ge `längd: 63, höjd: 18.4, omkrets: 162.8, area: 1159.2`.
@@ -27,7 +27,7 @@ Konstruktorn ska ha två parametrar, `length` och `heigth`.
 
 ##Typen Ellipse
 
-Konstruktorn ska ha två parametrar, `length` och `heigth`. Ska ärva från Shape varför inga ytterligare egenskaper behövs.
+Konstruktorn ska ha två parametrar, `length` och `height`. Ska ärva från Shape varför inga ytterligare egenskaper behövs.
 
 ###Metoder
 
@@ -38,7 +38,7 @@ Metoderna nedan ska vara genmsamma för samtliga objekt som instansieras av type
 
 ##Typen Rectangle
 
-Konstruktorn ska ha två parametrar, `length` och `heigth`. Ska ärva från Shape varför inga ytterligare egenskaper behövs.
+Konstruktorn ska ha två parametrar, `length` och `height`. Ska ärva från Shape varför inga ytterligare egenskaper behövs.
 
 ###Metoder
 
