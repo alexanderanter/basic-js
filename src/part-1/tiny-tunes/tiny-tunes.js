@@ -19,6 +19,7 @@ exports.add = function() {
 
     // Your code here - change the code under to make the test go green
     // The problem is to change så that variables a and b both become of data type "Number"
+    b *= 1;
     return a + b;
 };
 
@@ -35,8 +36,7 @@ exports.concater = function() {
 
     // Your code here - of course you should use the above variables to make the string
     // to return
-
-    return "";
+    return message + " " + time + " " + weeks;
 };
 
 /**
@@ -51,7 +51,8 @@ exports.round = function() {
 
     // Your code here should return 25
     // the variables should be used in the calculation
-    return a + b;
+
+    return Math.round(a + b);
 
 };
 
@@ -71,6 +72,16 @@ exports.middleCharacter = function(word) {
     // code should work for each call/test
 
     // your code here
+    if (word.length % 2 === 0) {
+        var themiddleChar = (word.length / 2);
+        var char2 = Math.ceil(themiddleChar);
+        var char1 = char2 - 1;
+        return word.charAt(char1) + word.charAt(char2);
+    }else {
+        var themiddleChar = (word.length / 2);
+        themiddleChar = Math.round(themiddleChar);
+        return word.charAt(themiddleChar - 1);
+    }
 
 };
 
@@ -83,9 +94,15 @@ exports.middleCharacter = function(word) {
  * @returns {string} - The hashtag (excluding the #-caracter)
  */
 exports.findHash = function(tweet) {
-
-    // your code here
-
+    var startHash = tweet.indexOf("#");
+    var lengthOfTweet = tweet.length;
+    var i = startHash + 1;
+    var finalTweetMsg = "";
+    while(i < lengthOfTweet && startHash !== -1) {
+       finalTweetMsg += tweet.charAt(i);
+        i++;
+    }
+    return finalTweetMsg;
 };
 
 /**
