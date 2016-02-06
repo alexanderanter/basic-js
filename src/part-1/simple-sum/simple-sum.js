@@ -17,5 +17,5 @@ exports.sum = function() {
     var firstNumber = 12;
     var secondNumber = 30;
 
-    return undefined;
+    return firstNumber + secondNumber;
 };
