@@ -14,7 +14,7 @@
  */
 exports.sayHello = function() {
 
-    var result = "Hallå, världen!";
+    var result = "Hello, World!";
 
     return result;
 };
