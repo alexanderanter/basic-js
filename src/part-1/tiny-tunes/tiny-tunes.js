@@ -114,9 +114,17 @@ exports.findHash = function(tweet) {
  * @returns {string}
  */
 exports.getOdd = function(limit) {
+    var i = 0;
+    var theOddString = "";
+    while (i < limit + 1) {
+    if (i % 2 !== 0) {
+            theOddString += i;
+        }
 
-    // Your code here
+        i++;
+    }
 
+    return theOddString;
 };
 
 /**
@@ -150,8 +158,10 @@ exports.greetings = function() {
  */
 exports.simpleReplaceWithForLoop = function(phrase) {
 
-    // your code here
-
+    for(var i = 0; phrase !== ""; i++){
+        return phrase.replace(/-/g, " ")
+    }
+  return "insert a string";
 };
 
 /**
@@ -161,8 +171,10 @@ exports.simpleReplaceWithForLoop = function(phrase) {
  * @returns {string} - The string whit all "-"-characters replaced with " "
  */
 exports.simpleReplaceWithWhileLoop = function(phrase) {
-
-    // your code here
+    while(phrase !== ""){
+        return phrase.replace(/-/g, " ")
+    }
+    return "insert a string";
 
 };
 
@@ -172,8 +184,20 @@ exports.simpleReplaceWithWhileLoop = function(phrase) {
  * * @returns {string} - That is 11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53
  */
 exports.firstThree = function() {
-
-    // Your code here
+  var outputString = "";
+  var theNumberString = "";
+  for (var i = 1; i < 3; i++){
+    for (var j = 1; j < 4; j += 1){
+      theNumberString += i + ""  + j;
+      if (j == 3){
+        theNumberString += " ";
+      } else {
+        theNumberString += "-";
+      }
+    }
+    outputString += theNumberString;
+  }
+    console.log(outputString);
 };
 
 /**
