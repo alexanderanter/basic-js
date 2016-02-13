@@ -216,11 +216,11 @@ var i;
 var vocals = "aeiouyåäöchar";
 var consonants = "bcdfghjklmnpqrstvwxz";
 for (i = 0; i < stringLength; i++){
-if(consonants.indexOf(phrase.charAt(i)) > -1){
-  resultString += phrase.charAt(i) + "o" + phrase.charAt(i);
-}else if(vocals.indexOf(phrase.charAt(i)) > -1) {
-  resultString += phrase.charAt(i);
-}
+  if(consonants.indexOf(phrase.charAt(i)) > -1){
+    resultString += phrase.charAt(i) + "o" + phrase.charAt(i);
+  }else if(vocals.indexOf(phrase.charAt(i)) > -1) {
+    resultString += phrase.charAt(i);
+  }
 }
 return resultString;
 
@@ -244,7 +244,29 @@ return resultString;
  * have bad data type the function returns the string "Incorrect parameters"
  */
 exports.makeURL = function(domain, path, isSecure, port) {
-
-    // Your code here
-
+  var finalURL = "";
+  var transferProtocol = "http";
+  if(isSecure && typeof isSecure !== "boolean"){
+    return "Incorrect parameters";
+  }
+  if(typeof domain === 'string' && typeof path === 'string'){
+    if(isSecure === true){
+      transferProtocol = "https";
+    }
+    finalURL = transferProtocol + "://" + domain;
+    if(port){
+      if(typeof port === 'number'){
+        finalURL += ":" + port;
+        finalURL += path + "/";
+        return finalURL;
+      }else {
+        return "Incorrect parameters";
+      }
+    }else {
+      finalURL += path + "/";
+      return finalURL;
+    }
+  }else {
+    return "Incorrect parameters";
+  }
 };
