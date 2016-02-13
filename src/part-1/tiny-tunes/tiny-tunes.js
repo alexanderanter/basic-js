@@ -184,20 +184,18 @@ exports.simpleReplaceWithWhileLoop = function(phrase) {
  * * @returns {string} - That is 11-12-13, 21-22-23, 31-32-33, 41-42-43, 51-52-53
  */
 exports.firstThree = function() {
-  var outputString = "";
-  var theNumberString = "";
-  for (var i = 1; i < 3; i++){
-    for (var j = 1; j < 4; j += 1){
-      theNumberString += i + ""  + j;
-      if (j == 3){
-        theNumberString += " ";
-      } else {
-        theNumberString += "-";
+var numberString = "";
+for (var i = 1; i < 6; i++){
+  for (var j = 1; j <4; j++){
+    numberString += i + "" + j;
+      if(j !== 3){
+        numberString += "-";
+      }else if (j === 3 && i !== 5){
+        numberString += ", ";
       }
     }
-    outputString += theNumberString;
   }
-    console.log(outputString);
+  return numberString;
 };
 
 /**
