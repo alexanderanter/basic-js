@@ -209,8 +209,20 @@ for (var i = 1; i < 6; i++){
  * @returns {string} - The encrypted string - in lower case
  */
 exports.robberLanguageEncrypter = function(phrase) {
-
-    // your code here
+phrase = phrase.toLowerCase();
+var stringLength = phrase.length;
+var resultString = "";
+var i;
+var vocals = "aeiouyåäöchar";
+var consonants = "bcdfghjklmnpqrstvwxz";
+for (i = 0; i < stringLength; i++){
+if(consonants.indexOf(phrase.charAt(i)) > -1){
+  resultString += phrase.charAt(i) + "o" + phrase.charAt(i);
+}else if(vocals.indexOf(phrase.charAt(i)) > -1) {
+  resultString += phrase.charAt(i);
+}
+}
+return resultString;
 
 };
 
