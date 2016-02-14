@@ -8,5 +8,20 @@
 "use strict";
 
 exports.add = function() {
-    // Your code here
+      var finalResult = 0;
+      var test;
+      for (var i=0; i<arguments.length; i++){
+
+        var theNumber =  Number(arguments[i]);
+        
+        if(isNaN(theNumber) == false && typeof arguments[i] !== "boolean") {
+          arguments[i] = Number(arguments[i]);
+          finalResult += arguments[i];
+        }else {
+          finalResult = "error";
+          break;
+        }
+      }
+
+    return finalResult;
 };
