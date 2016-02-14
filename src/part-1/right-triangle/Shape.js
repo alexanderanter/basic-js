@@ -18,9 +18,16 @@ var Shape = (function() {
          * @function Shape.createRightTriangle
          */
         createRightTriangle: function(base) {
-
-            // TODO: Write your code here.
-
+          var triangle = "";
+          var i;
+          var j;
+          for(i = 1;i <= base; i++) {
+              for(j = 1; j <= i; j++){
+                triangle += "#";
+              }
+              triangle += "\n";
+          }
+          return triangle;
         }
     };
 }());
