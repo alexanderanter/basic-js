@@ -5,4 +5,4 @@ have mocha test implemented to check if the solution meets the requirement.
 
 Programs can be found under /src
 
-Open Sourced by Linneaus University for Basic Programming course 1DV201
+Open Sourced by Linneaus University for Basic Programming course 1dv021
