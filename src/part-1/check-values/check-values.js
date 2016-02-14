@@ -17,8 +17,19 @@
  */
 exports.check = function(value) {
     var startMessage = "You send me ";
-    // your code here
+    var typen;
 
-
+    if(value && typeof value !== "object"){
+      typen = typeof value;
+      startMessage += "a " + typen;
+    }else if (value === null){
+      startMessage = "You send me null";
+    }else if (value instanceof Array){
+      startMessage += "an array";
+    }else if (typeof value === "object"){
+      startMessage += "an object";
+    }else {
+      startMessage += "an undefined value";
+    }
     return startMessage;
 };
