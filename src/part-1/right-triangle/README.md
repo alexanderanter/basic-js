@@ -1,6 +1,6 @@
 # Rätvinklig triangel
 
-Komplettera funktionen `Shap.createRightTriangle(base)`, som endast får använda följande strängar, en gång vardera, 
+Komplettera funktionen `Shape.createRightTriangle(base)`, som endast får använda följande strängar, en gång vardera, 
 
 - `"#"`
 - `"\n"`
@@ -34,5 +34,5 @@ Funktioner, metoder, etc. som *kan* komma till användning beroende hur du välj
 
 - [for](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
 - [String.length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)
-- [+=, tilldelningsoperator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators) 
-- [<=, operatorn mindre än eller lika med](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison_operators) 
+- [+=, tilldelningsoperator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators)
+- [<=, operatorn mindre än eller lika med](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison_operators)
