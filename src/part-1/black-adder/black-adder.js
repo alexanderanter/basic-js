@@ -9,19 +9,22 @@
 
 exports.add = function() {
       var finalResult = 0;
-      var test;
+      var theArgument;
       for (var i=0; i<arguments.length; i++){
-
-        var theNumber =  Number(arguments[i]);
-        
-        if(isNaN(theNumber) == false && typeof arguments[i] !== "boolean") {
-          arguments[i] = Number(arguments[i]);
-          finalResult += arguments[i];
+        theArgument = arguments[i];
+        //replaceing , with . for nunmber conversion
+        if(typeof theArgument === "string"){
+          theArgument = theArgument.replace(/,/g, '.');
+        }
+        //converting string to numbers
+        theArgument = Number(theArgument);
+        //checks that its a number and not a boolean
+        if(isNaN(theArgument) === false && typeof arguments[i] !== "boolean") {
+          finalResult += theArgument;
         }else {
           finalResult = "error";
           break;
         }
       }
-
     return finalResult;
 };
