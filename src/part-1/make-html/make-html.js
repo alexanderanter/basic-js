@@ -34,14 +34,16 @@ var MakeHtml = (function() {
             // TODO: Write this code last
 
             var keys = Object.keys(blocks); // ['make','color','year']
-            var snippet;
+            var snippet = "";
+
             keys.forEach(function(key) {
-
               var testVal = (blocks[key]);
-              console.log(testVal);
+              var keys = Object.keys(testVal);
+              keys.forEach(function(key){
+                snippet += MakeHtml.makeElement(key, testVal[key]);
+              });
             });
-
-
+            return snippet;
         }
     };
 }());
