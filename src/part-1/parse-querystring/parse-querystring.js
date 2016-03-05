@@ -6,7 +6,7 @@
  */
 
 "use strict";
-
+ 
 /**
  * The function takes a String parameter. It will be a URL (in most cases) with
  * random number of querystrings ex. http://lnu.se?key1=value1&key2=value2
