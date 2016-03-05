@@ -1,6 +1,8 @@
 ## Make HTML
 
-Nivå: A
+Level: A
+
+This assignment is an application that creates a very simplified html snippet.
 
 Denna uppgiften är en applikation som skapar HTML. Det är dock en enklare variant som
 bara klarar av att skapa starttag, sluttag och textinnehåll däremellan. Den klarar alltså
