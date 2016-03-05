@@ -19,26 +19,20 @@
  * @returns {Object}
  */
 exports.parse = function(url) {
-  url = "http://lnu.se?key1=value1&key2=value2&key3=value3";
   var urlLength = url.length;
   var ampPos = url.indexOf('&');
-
   var urlList = {};
-  //check if there is a value at all
-  if (url.indexOf('?') !== -1 ){
-
-    //push key1 and value1
-    urlList[url.split("?")[1].split("=")[0]] = url.split("=")[1].split("&")[0];
-  }
-  while (ampPos !== -1) {
-
-    var urlCutOff = url.substring(ampPos, urlLength);
-    urlList[urlCutOff.split("&")[1].split("=")[0]] = urlCutOff.split("=")[1].split("&")[0];
-
-    ampPos = url.indexOf('&', ampPos + 1);
-
-  }
-    console.log(urlList);
-
+    //takes out the first valuepair if it exists and also add a conditional if only the key is set but not value
+    if (url.indexOf('?') !== -1 && url.indexOf('=') !== -1) {
+      urlList[url.split("?")[1].split("=")[0]] = url.split("=")[1].split("&")[0];
+    }else if (url.indexOf('key') !== -1) {
+      urlList.key = "";
+    }
+    //loops through as many & chars there are in the string and adds the valuepair to the object
+    while (ampPos !== -1) {
+      var urlCutOff = url.substring(ampPos, urlLength);
+      urlList[urlCutOff.split("&")[1].split("=")[0]] = urlCutOff.split("=")[1].split("&")[0];
+      ampPos = url.indexOf('&', ampPos + 1);
+    }
     return urlList;
 };
