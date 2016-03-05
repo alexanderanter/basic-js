@@ -30,7 +30,20 @@ _codeMap.push("system");
  * @param {Number} type - type of the message which is translated against the code map
  */
 exports.write = function(message, typeNumber) {
-    // your code here
+  // use a helper function for translation
+  if (!typeNumber){
+    typeNumber = "info-message";
+    _codeMap.push(typeNumber);
+  }
+  var logType = getTypeString(typeNumber);
+  var myObject = {};
+  myObject[logType] = message;
+  _log.push(myObject);
+
+
+
+
+
 };
 
 /**
@@ -40,14 +53,29 @@ exports.write = function(message, typeNumber) {
  * @returns {Array}
  */
 exports.read = function(typeNumber) {
-    // your code here
+  // return all if no parameter is provided
+  if (typeNumber === undefined) {
+      return _log;
+  }
+
+  // Filter out the right values
+  var resultArray = _log.filter(function(value) {
+
+      // get the code in the object
+      var code = getTypeNumber(Object.keys(value)[0]);
+
+      // if it is the one the client want return true (and it will be filtered out)
+      return code === typeNumber;
+  });
+
+  return resultArray;
 };
 
 /**
  * This function clears the log by removing all messages
  */
 exports.clear = function() {
-    // your code here
+      _log = [];
 };
 
 // ######### private Helper functions - No need to touch
