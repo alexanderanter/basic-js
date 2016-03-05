@@ -22,14 +22,14 @@ var helper = require("./helper");
  */
 exports.getGangster = function(initials) {
     // Only change code in this function to get the tests to work
-    var theSuspect;
-    do {
-        var name = helper.getNext();
-        var initialsOfTheName = helper.getInitials(name);
-        if (initials === initialsOfTheName) {
-            theSuspect = name;
-        }
-    } while (name !== "")
 
-    return theSuspect;
+    var theSuspect = helper.getNext();
+    while (theSuspect !== "") {
+      var initialsOfTheName = helper.getInitials(theSuspect);
+      if (initials === initialsOfTheName) {
+        return theSuspect;
+      }
+      theSuspect = helper.getNext();
+    }
+    return "No suspect found!";
 };
