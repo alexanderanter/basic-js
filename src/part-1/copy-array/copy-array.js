@@ -18,6 +18,10 @@
  * @returns {Array}
  */
 exports.addToCopy = function(data, number) {
-
-    // TODO: Your code here 
+    if(!data || !number || isNaN(number) === true || data.length < 1 ){
+             throw TypeError("TypeError");
+    }
+    var copiedArray = data.slice();
+    copiedArray.push(number);
+    return copiedArray;
 };
