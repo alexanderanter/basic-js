@@ -8,7 +8,7 @@
 var SortingArrays = (function() {
     "use strict";
 
- 
+
     return {
         /**
          * Takes an Array and sort it in descending (fallande) order
@@ -18,7 +18,18 @@ var SortingArrays = (function() {
          * @returns {Array} - The sorted array
          */
         sortDescending: function(data) {
-            // TODO: Your code here
+          var copiedArray = data.slice();
+
+          if(typeof data !== "object") {
+            throw new TypeError("you didnt send in an object");
+          }else if ( data.length < 1) {
+            throw new Error("the array is empty!");
+          }
+          copiedArray.sort(function(a, b) {
+              return b - a;
+          });
+
+          return copiedArray;
         },
 
         /**
@@ -29,7 +40,19 @@ var SortingArrays = (function() {
          * @returns {Array} - The sorted array
          */
         sortAscending: function(data) {
-            // TODO: Your code here
+          var copiedArray = data.slice();
+
+          if(typeof data !== "object") {
+            throw new TypeError("you didnt send in an object");
+          }else if ( data.length < 1) {
+            throw new Error("the array is empty!");
+          }
+
+          copiedArray.sort(function(a, b) {
+              return a - b;
+          });
+
+          return copiedArray;
         }
     };
 
