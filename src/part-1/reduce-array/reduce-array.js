@@ -13,6 +13,6 @@
  * @returns {Number} The total sum of numbers in the array
  */
 exports.getTotal = function(data) {
-
+ 
     // TODO: Your code here
 };
