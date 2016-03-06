@@ -8,7 +8,7 @@
 var SortingArrays = (function() {
     "use strict";
 
-
+ 
     return {
         /**
          * Takes an Array and sort it in descending (fallande) order
