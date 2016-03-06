@@ -17,7 +17,27 @@
  * @returns {Array<string>}
  */
 exports.overmean = function(students) {
+  //copy the array
+  var copiedArray = students.slice();
+  var totalSum = 0;
+  var result = [];
+  var keys = Object.keys(students);
+  var meanPoint = 0;
+//Check the input
+  if(!students || typeof students !== "object" || students.length < 1 ) {
+      throw TypeError("TypeError");
+  }
+  //get the totalSum
+  keys.forEach(function(key) {
+    totalSum += copiedArray[key].points;
+  });
+  meanPoint = totalSum / keys.length;
+  //pull the name for all student with higher than the mean point
+  keys.forEach(function(key) {
+    if(copiedArray[key].points >= meanPoint){
+      result.push(copiedArray[key].name);
+    }
+  });
 
-    // TODO: Your code here
+  return result;
 };
-
