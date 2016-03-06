@@ -14,5 +14,7 @@
  */
 exports.getTotal = function(data) {
 
-    // TODO: Your code here
+  return data.reduce(function (lastVal, nextObj) {
+    return lastVal + nextObj.nr;
+  }, 0);
 };
