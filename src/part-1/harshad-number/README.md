@@ -1,5 +1,5 @@
 # Harshadtal
-
+ 
 Harshadtal, eller Nivental, i en given talbas, i denna uppgift talbasen 10, är ett heltal som är jämt delbart med sin siffersumma.
 
 Exmpel på tal som är Harshadtal:
@@ -18,7 +18,7 @@ Din uppgift är att slutföra implementationen av det påbörjade Harshad-objekt
 
 - `isValid`, undersöker om ett tal är ett Harshadtal eller inte. `Harshad.isValid(24);` returnerar `true`.
 - `getNext`, returnerar nästa Harshadtal. `Harshad.getNext(14);` returnerar `18`.
-- `getSequence`, returnerar en array innehållande en sekvens av n Harshadtal, där startvärdet, som inte behöver anges och har standardvärdet 0, inte är inkluderat. 
+- `getSequence`, returnerar en array innehållande en sekvens av n Harshadtal, där startvärdet, som inte behöver anges och har standardvärdet 0, inte är inkluderat.
 	- `Harshad.getSequence(3, 160); ` returnerar `[162, 171, 180]`.
 	- `Harshad.getSequence(15); ` returnerar `[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 18, 20, 21, 24 ]`.
 
