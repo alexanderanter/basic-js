@@ -16,5 +16,6 @@ exports.getTotal = function(data) {
 
   return data.reduce(function (lastVal, nextObj) {
     return lastVal + nextObj.nr;
-  }, 0);
+  }, 0);//set a start value of 0 to the reduce function so lastVal starts with 0
+
 };
