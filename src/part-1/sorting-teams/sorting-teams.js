@@ -7,7 +7,7 @@
  */
 var SortingTeams = (function() {
     "use strict";
-
+ 
     // let node.js help us with reading from filesystem
     var path = require("path");
     var fileSystem = require("fs");
