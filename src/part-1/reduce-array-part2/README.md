@@ -1,7 +1,7 @@
 ## Laboration - reduce-array 2
 
 Nivå: C
-
+ 
 Detta är en fortsättning på reduce-array. Istället för att ta vanliga nummer i arrayen som
 ska köras reduce på kommer arrayen innehålla objekt på formen {nr: <Number>}
 Uppgiften är att slå ihop alla nr-värden till en slutsumma med hjälp av Array.reduce
