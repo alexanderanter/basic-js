@@ -11,19 +11,43 @@ var MakeHtml = (function() {
     return {
 
         makeStartTag: function(element) {
-            // TODO: Write this code first
+            return "<" + element + ">";
         },
 
         makeEndTag: function(element) {
-            // TODO: Write this code second
+              return "</" + element + ">";
         },
 
         makeElement: function(element, text) {
-            // TODO: Write this code third
+            var completeElement;
+            completeElement = MakeHtml.makeStartTag(element) + text + MakeHtml.makeEndTag(element);
+            return completeElement;
         },
 
         makeSnippet: function(blocks) {
-            // TODO: Write this code last
+          var keys = Object.keys(blocks); // ['make','color','year']
+          var snippet = "";
+
+          keys.forEach(function(key) {
+            var testVal = (blocks[key]);
+            var keys = Object.keys(testVal);
+
+            var seperator = 0;   //used to change turns in the if else statement
+            var theElement = "";
+
+            keys.forEach(function(key){
+
+              if(seperator === 0){
+                theElement = testVal[key];
+                seperator = 1;
+              }else { //if not an element it will be value and add its to the snippet
+                snippet += MakeHtml.makeElement(theElement, testVal[key]);
+                seperator = 0;
+              }
+              
+            });
+          });
+          return snippet;
         }
     };
 }());
