@@ -18,8 +18,20 @@ var Harshad = (function() {
          */
         isValid: function(number) {
 
-            // TODO: Write your code here! This is the first function to implement.
+            var sum = 0;
+            var num = number;
+            var booResult;
 
+            while(num > 0) {
+              sum += num % 10;
+              num = Math.floor(num / 10);
+            }
+            if(number % sum === 0){
+              booResult = true;
+            }else {
+              booResult = false;
+            }
+            return booResult;
         },
 
         /**
@@ -30,9 +42,15 @@ var Harshad = (function() {
          * @function Harshad.getNext
          */
         getNext: function(number) {
-
-            // TODO: Write your code here! This is the second function to implement.
-
+            var validHarshad = false;
+            var count = number;
+            do {
+              if(Harshad.isValid(count) === true){
+                validHarshad = true;
+                return count;
+              }
+              count++;
+            } while (validHarshad === false);
         },
 
         /**
@@ -44,9 +62,18 @@ var Harshad = (function() {
          * @function Harshad.getSequence
          */
         getSequence: function(count, start) {
+            var harshSeq = [];
+            if(!start) {
+              start = 0;
+            }
+            //find the next harshad until the array got enough number as passed in into the count parameter
+            do {
+              start++; //avoid to validate the actual starting number by increment in the beginning of the loop
+              start = Harshad.getNext(start);
+              harshSeq.push(start);
+            } while (harshSeq.length < count);
 
-            // TODO: Write your code here! This is the third function to implement.
-
+            return harshSeq;
         }
     };
 }());
