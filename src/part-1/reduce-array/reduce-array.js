@@ -13,6 +13,14 @@
  * @returns {Number} The total sum of numbers in the array
  */
 exports.getTotal = function(data) {
- 
-    // TODO: Your code here
+  var copiedArray = data.slice();
+  var total = 0;
+
+  if(copiedArray.length > 0){
+    total = copiedArray.reduce(function(a, b) {
+        return a + b;
+    });
+  }
+
+  return total;
 };
