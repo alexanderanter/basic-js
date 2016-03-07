@@ -14,6 +14,6 @@
  * @returns {boolean}
  */
 exports.isSequence = function(arr, sub) {
-    // TODO: your code here
+
 };
 
