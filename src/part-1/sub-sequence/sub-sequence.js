@@ -38,8 +38,7 @@ exports.isSequence = function(arr, sub) {
                     }
 
                     console.log(lastVal + "lastVal")
-                    console.log(secondArray[i] + "nextva");
-
+                    console.log(secondArray[i] + "nextval");
 
                     i++;
                     found = false;
