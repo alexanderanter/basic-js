@@ -56,9 +56,9 @@ var GetWinners = (function() {
          */
         sortStringsAscending: function(data) {
 
-            // TODO: Your code here
-            console.log(data);
-
+           var copiedArray = data.slice();
+            copiedArray.sort();
+            return copiedArray;
         },
 
         /**
