@@ -32,8 +32,18 @@ var GetWinners = (function() {
          * @returns {Array.<String>}
          */
         getHighestValuesInFrequency: function(frequency) {
+            console.log(frequency);
+            var highestNum = 0;
+            var theWinner = [];
+            var keys = Object.keys(frequency);
+            keys.forEach(function(key) {
+                if (frequency[key] > highestNum) {
+                    highestNum = frequency[key];
+                    theWinner = [key];
+                }
+            });
 
-
+            return theWinner;
         },
 
         /**
