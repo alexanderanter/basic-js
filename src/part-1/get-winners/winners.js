@@ -9,16 +9,10 @@ var GetWinners = (function() {
          * @returns {Object.{ String: Number }} - The object as example: {'mats': 1, 'john': 3}
          */
         getFrequencyInArray: function(data) {
-            // TODO: Your code here - start here
-            var copiedObj = data.slice();
-            var keys = Object.keys(copiedObj);
             var lowerNames = [];
             var result = {};
 
-        /*    console.log(copiedObj);
-            console.log(Object.keys(copiedObj)); // console: ['0', '1', '2']*/
-
-            copiedObj.forEach(function(key) {
+            data.forEach(function(key) {
                 lowerNames.push(key.toLowerCase());
             });
 
