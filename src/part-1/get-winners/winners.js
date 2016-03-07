@@ -35,11 +35,15 @@ var GetWinners = (function() {
             var highestNum = 0;
             var theWinner = [];
             var keys = Object.keys(frequency);
+
             keys.forEach(function(key) {
                 if (frequency[key] > highestNum) {
                     highestNum = frequency[key];
                     theWinner = [key];
+                }else if (frequency[key] === highestNum) {
+                    theWinner.push(key);
                 }
+
             });
 
             return theWinner;
@@ -53,6 +57,7 @@ var GetWinners = (function() {
         sortStringsAscending: function(data) {
 
             // TODO: Your code here
+            console.log(data);
 
         },
 
