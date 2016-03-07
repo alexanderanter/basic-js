@@ -33,6 +33,7 @@ describe("Test the getFrequencyInArray function", function() {
         done();
     });
 });
+
 //
 
 describe("Test the getHighestValuesInFrequency function", function() {
@@ -79,7 +80,6 @@ describe("Test the sortStringsAscending function", function() {
 
 });
 
-
 describe("Test the getWinner function", function() {
 
     it("getWinner - Should return ['john'] when called with " +
@@ -89,13 +89,11 @@ describe("Test the getWinner function", function() {
         done();
     });
 
-
     it("getWinner - return ['jacob', 'johan', 'john'] when called with " +
         "['Mats', 'Johan', 'John', 'johan', 'jacob', 'john', 'jacob']", function(done) {
         var result = w.getWinners(['Mats', 'Johan', 'John', 'johan', 'jacob', 'john', 'jacob'])
         expect(result).eql(['jacob', 'johan', 'john']);
         done();
     });
-
 
 });

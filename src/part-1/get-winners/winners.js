@@ -10,6 +10,26 @@ var GetWinners = (function() {
          */
         getFrequencyInArray: function(data) {
             // TODO: Your code here - start here
+            var copiedObj = data.slice();
+            var keys = Object.keys(copiedObj);
+            var lowerNames = [];
+            var result = {};
+
+        /*    console.log(copiedObj);
+            console.log(Object.keys(copiedObj)); // console: ['0', '1', '2']*/
+
+            copiedObj.forEach(function(key) {
+                lowerNames.push(key.toLowerCase());
+            });
+
+            var i = 0;
+            for (i; i < lowerNames.length; ++i) {
+                if(!result[lowerNames[i]]){
+                    result[lowerNames[i]] = 0;
+                }
+                ++result[lowerNames[i]];
+            }
+            return result;
         },
 
         /**
@@ -19,7 +39,7 @@ var GetWinners = (function() {
          */
         getHighestValuesInFrequency: function(frequency) {
 
-            // TODO: Your code here
+
         },
 
         /**
