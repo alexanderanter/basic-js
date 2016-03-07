@@ -18,11 +18,13 @@ var GetWinners = (function() {
 
             var i = 0;
             for (i; i < lowerNames.length; ++i) {
-                if(!result[lowerNames[i]]){
+                if (!result[lowerNames[i]]) {
                     result[lowerNames[i]] = 0;
                 }
+
                 ++result[lowerNames[i]];
             }
+
             return result;
         },
 
@@ -56,7 +58,7 @@ var GetWinners = (function() {
          */
         sortStringsAscending: function(data) {
 
-           var copiedArray = data.slice();
+            var copiedArray = data.slice();
             copiedArray.sort();
             return copiedArray;
         },
