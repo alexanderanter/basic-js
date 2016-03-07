@@ -6,7 +6,7 @@ I denna uppgift finns fyra stycken funktioner definierade varav du ska fylla på
 
 Bland kursledarna finns en återkommande tävling där vinnarens namn i varje omgång läggs in i en array.
 
-
+s
 ```
 // Exempel
 ["mats", "John", "john", "Johan", "Jacob"]
