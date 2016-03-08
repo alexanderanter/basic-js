@@ -1,11 +1,9 @@
-# Laboration - Sub sequence
+# Challenge - Sub sequence
 
-Nivå: C
+Level: C
 
-Något att bita i för er som vill träna på problemlösning.
-Skriv färdigt funktionen isSequence som tar två arrayer så att den returnerar true om man kan hitta
-en sekvens (eller hela) av andra parametern i den första.
-
+Complete the function isSequence that takes two parameters and returns true if you can find a sequence (or the whole one)
+of the 2nd parameter in the first one.
 ```
 var arr = [1, 2, 3, 4];
 var sub = [2, 3];
