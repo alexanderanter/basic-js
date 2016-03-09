@@ -1,10 +1,15 @@
 "use strict";
 
 /**
- * Lego builder part1
+ * Lego builder part1 challenge
  *
  * @author Johan Leitet
  * @version 1.0.0
+ */
+
+/**
+ * Solution by:
+ * @author alexanderanter
  */
 
 /**
@@ -17,5 +22,29 @@
  * @returns {{x: Number, y: Number, z: Number, color: String, toString: function, render: function}}
  */
 exports.createLego = function(x, y, z, color) {
-    // TODO: Write your code here. The functions should return an object representing a lego brick
+    var obj = {
+        x: x || 2,
+        y: y || 4,
+        z: z || 2,
+        color: color || "red",
+        toString: function(){
+            var result = "";
+
+            for (var i = 0; i < (x-1); i++) {
+                result += "® ";
+            }
+            result += "®";
+
+            for (var j = 0; j < (y - 1); j++) {
+                result += "\n" + result;
+            }
+            return result;
+        },
+
+        render: function() {
+            var renderedResult = this.toString();
+            return console.log(renderedResult);
+        }
+    };
+    return obj;
 };
