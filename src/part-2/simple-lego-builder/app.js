@@ -7,7 +7,7 @@ var part3 = require("./lego-part3");
 // Testing part 1
 var lego1 = part1.createLego(4, 2, 1, "red");
 lego1.render();
-console.log(); // For spacing purposes only
+console.log(); // For spacing purposes only.
 
 // Testing part 2
 //var lego2 = new part2.Lego();
