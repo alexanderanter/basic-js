@@ -3,7 +3,11 @@
  * @author Mats Loock
  * @version 1.0.0
  */
-
+ 
+ /**
+  * Solution by
+  * @author alexanderanter
+  */
 "use strict";
 
 try {
