@@ -15,7 +15,8 @@ function Lego(x, y, z, color) {
     this.z = z || 2;
     this.color = color;
 }
-Lego.prototype.toString = function(){
+
+Lego.prototype.toString = function() {
     var result = "";
 
     for (var i = 0; i < (this.x - 1); i++) {
@@ -29,12 +30,11 @@ Lego.prototype.toString = function(){
     }
 
     return result;
-}
+};
 
 Lego.prototype.render = function() {
     var renderedResult = this.toString();
     return console.log(renderedResult);
-}
-
+};
 
 exports.Lego = Lego;
