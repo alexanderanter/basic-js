@@ -22,22 +22,26 @@
  * @returns {{x: Number, y: Number, z: Number, color: String, toString: function, render: function}}
  */
 exports.createLego = function(x, y, z, color) {
-    var obj = {
+    return {
         x: x || 2,
         y: y || 4,
         z: z || 2,
         color: color || "red",
-        toString: function(){
+        toString: function() {
             var result = "";
 
-            for (var i = 0; i < (x-1); i++) {
+            //adds all lego objects for one line except the last one
+            for (var i = 0; i < (x - 1); i++) {
                 result += "® ";
             }
+
+            //adds the last one as well without any whitespace
             result += "®";
 
             for (var j = 0; j < (y - 1); j++) {
                 result += "\n" + result;
             }
+
             return result;
         },
 
@@ -46,5 +50,4 @@ exports.createLego = function(x, y, z, color) {
             return console.log(renderedResult);
         }
     };
-    return obj;
 };
