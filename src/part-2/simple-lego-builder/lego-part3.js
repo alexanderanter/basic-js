@@ -10,10 +10,31 @@
  * @param {String} color Color of the lego brick ("blue", "red", "green" etc.)
  */
 function Lego(x, y, z, color) {
-    // TODO: Write all code in this constructor function
+    this.x = x || 2;
+    this.y = y || 4;
+    this.z = z || 2;
+    this.color = color;
+}
+Lego.prototype.toString = function(){
+    var result = "";
 
+    for (var i = 0; i < (this.x - 1); i++) {
+        result += "® ";
+    }
+
+    result += "®";
+
+    for (var j = 0; j < (this.y - 1); j++) {
+        result += "\n" + result;
+    }
+
+    return result;
 }
 
-// TODO: Write Prototype functions here
+Lego.prototype.render = function() {
+    var renderedResult = this.toString();
+    return console.log(renderedResult);
+}
+
 
 exports.Lego = Lego;
