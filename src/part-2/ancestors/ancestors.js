@@ -24,6 +24,9 @@ var createAncestorTree = function(current, level) {
 
     // TODO: Your code here - Use the debugger to analyze "current"
 
+
+    console.log("current");
+
 };
 
 /**
