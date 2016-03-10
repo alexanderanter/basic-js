@@ -21,12 +21,23 @@ function Ancestors(ancestorObject) {
  * @private
  */
 var createAncestorTree = function(current, level) {
+  var levelString = "";
 
-    // TODO: Your code here - Use the debugger to analyze "current"
+  if(!level) {
+    level = 1;
+  }
 
+  for(var i = 0; i < level; i++) {
+    levelString += "\t";
+  }
 
-    console.log("current");
-
+  if(current.name) {
+      treeString += current.name;
+      for(var j = 0; j < current.children.length; j++){
+        treeString += "\n" + levelString;
+        createAncestorTree(current.children[j], level + 1);
+      }
+  }
 };
 
 /**
