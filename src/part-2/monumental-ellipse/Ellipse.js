@@ -8,32 +8,36 @@
 "use strict";
 
 function Ellipse(a, b) {
-        var _a;
-        var _b;
-        Object.defineProperty(this, "a", {
-            get: function() {
-              return _a;
-            },
-            set: function() {
-              if(a < 0){
-                throw new Error("a must be equal or higher than 0");
-              } else {
-                _a = a;
-              }
-            }
-        });
-        Object.defineProperty(this, "b", {
-            get: function() {
-              return _b;
-            },
-            set: function() {
-              if(a < 0) {
-                throw new Error("b must be equal or higher than 0");
-              } else {
-                _b = b;
-              }
-            }
-        });
+    Object.defineProperty(this, "a",
+    {
+     get: function(){
+       return a;
+     },
+     set: function(value) {
+       var floatVal = parseFloat(value);
+       console.log(floatVal);
+       if (isNaN(floatVal) || floatVal < 0){
+          throw new Error("postalCode seems to beinvalid!");
+       }
+       a = floatVal;
+     }
+    });
+    Object.defineProperty(this, "b",
+    {
+     get: function(){
+       return b;
+     },
+     set: function(value) {
+       var floatVal = parseFloat(value);
+       console.log(floatVal);
+       if (isNaN(floatVal) || floatVal < 0){
+          throw new Error("postalCode seems to beinvalid!");
+       }
+       b = floatVal;
+     }
+    });
+  this.a = a;
+  this.b = b;
 }
 
 Ellipse.prototype.area = function() {
