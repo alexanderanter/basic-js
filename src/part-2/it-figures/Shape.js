@@ -13,7 +13,9 @@ function Shape(length, height) {
 }
 
 Shape.prototype.toString = function() {
-    console.log(this.length + this.height);
+    var result;
+    result = "längd: " + this.length + ", höjd: " + this.height + ", omkrets" + this.circumference + ", area: " + this.area;
+    return result;
 };
 
 function Ellipse(length, height) {
@@ -24,11 +26,12 @@ Ellipse.prototype = Object.create(Shape.prototype);
 Ellipse.prototype.constructor = Ellipse;
 
 Ellipse.prototype.area = function() {
-
+    var b = Math.PI * (this.length / 2) * (this.height / 2);
+    return b;
 };
 
 Ellipse.prototype.circumference = function() {
-
+    return Math.PI * Math.sqrt(this.length * this.length / 2 + this.height * this.height / 2);
 };
 
 function Rectangle(length, height) {
@@ -37,13 +40,13 @@ function Rectangle(length, height) {
 
 Rectangle.prototype = Object.create(Shape.prototype);
 Rectangle.prototype.constructor = Rectangle;
-
 Rectangle.prototype.area = function() {
-
+    return this.length * this.height;
 };
 
 Rectangle.prototype.circumference = function() {
-
+    console.log(this.length);
+    return 2 * this.length * this.height;
 };
 
 // Exports
