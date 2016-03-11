@@ -45,7 +45,7 @@ Rectangle.prototype.area = function() {
 };
 
 Rectangle.prototype.circumference = function() {
-    console.log(this.length);
+
     return 2 * this.length * this.height;
 };
 

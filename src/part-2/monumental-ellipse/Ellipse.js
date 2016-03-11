@@ -15,7 +15,6 @@ function Ellipse(a, b) {
      },
      set: function(value) {
        var floatVal = parseFloat(value);
-       console.log(floatVal);
        if (isNaN(floatVal) || floatVal < 0){
           throw new Error("postalCode seems to beinvalid!");
        }
@@ -29,7 +28,6 @@ function Ellipse(a, b) {
      },
      set: function(value) {
        var floatVal = parseFloat(value);
-       console.log(floatVal);
        if (isNaN(floatVal) || floatVal < 0){
           throw new Error("postalCode seems to beinvalid!");
        }
