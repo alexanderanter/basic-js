@@ -1,6 +1,6 @@
 "use strict";
 /**
- * 
+ *
  *
  * @author: alexanderanter
  * @version 1.0.0

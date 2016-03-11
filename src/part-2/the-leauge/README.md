@@ -132,4 +132,3 @@ Arsenal             3
 Tänk på att vid kopiering/kloning av objekt så fungerar inte slice() utan vi måste göra en "deep-copy/shallowCopy".
 Titta i dokumentationen för Object för att hitta ledtrådar för att lösa detta.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
-

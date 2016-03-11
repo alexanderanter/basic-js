@@ -13,12 +13,9 @@ function Shape(length, height) {
 }
 
 Shape.prototype.toString = function() {
-    var result;
-
     var outputArea = Math.round((this.area(this.length, this.height)) * 10) / 10;
     var outputCirc = Math.round((this.circumference(this.length, this.height)) * 10) / 10;
-    result = "längd: " + this.length + ", höjd: " + this.height + ", omkrets: " + outputCirc + ", area: " + outputArea;
-    return result;
+    return "längd: " + this.length + ", höjd: " + this.height + ", omkrets: " + outputCirc + ", area: " + outputArea;
 };
 
 function Ellipse(length, height) {
