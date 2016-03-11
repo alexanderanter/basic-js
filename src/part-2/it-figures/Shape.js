@@ -1,7 +1,7 @@
 /**
  * Module for shapes.
  *
- * @author TODO: Write your name here!
+ * @author : alexanderanter
  * @version 1.0.0
  */
 
