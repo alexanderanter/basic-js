@@ -14,7 +14,10 @@ function Shape(length, height) {
 
 Shape.prototype.toString = function() {
     var result;
-    result = "längd: " + this.length + ", höjd: " + this.height + ", omkrets" + this.circumference + ", area: " + this.area;
+
+    var outputArea = Math.round((this.area(this.length, this.height)) * 10) / 10;
+    var outputCirc = Math.round((this.circumference(this.length, this.height)) * 10) / 10;
+    result = "längd: " + this.length + ", höjd: " + this.height + ", omkrets: " + outputCirc + ", area: " + outputArea;
     return result;
 };
 
@@ -24,14 +27,13 @@ function Ellipse(length, height) {
 
 Ellipse.prototype = Object.create(Shape.prototype);
 Ellipse.prototype.constructor = Ellipse;
-
 Ellipse.prototype.area = function() {
-    var b = Math.PI * (this.length / 2) * (this.height / 2);
+    var b = Math.PI * this.length / 2 * this.height / 2;
     return b;
 };
 
 Ellipse.prototype.circumference = function() {
-    return Math.PI * Math.sqrt(this.length * this.length / 2 + this.height * this.height / 2);
+    return Math.PI * Math.sqrt(this.length * (this.length / 2) + this.height * (this.height / 2));
 };
 
 function Rectangle(length, height) {
@@ -45,10 +47,9 @@ Rectangle.prototype.area = function() {
 };
 
 Rectangle.prototype.circumference = function() {
-
-    return 2 * this.length * this.height;
+    return 2 * this.length + 2 * this.height;
 };
-
+console.log(Ellipse.area);
 // Exports
 module.exports = Shape;
 module.exports.Ellipse = Ellipse;
