@@ -18,7 +18,7 @@ function Team(teamName) {
 
 Team.prototype.toTableRow = function(padding) {
 
-  var result;
+  var result = "";
   this.padding = (padding - 2) || 21;
   result = this.name;
 
