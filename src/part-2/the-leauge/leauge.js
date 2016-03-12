@@ -33,7 +33,19 @@ Leauge.prototype.addTeam = function(original) {
   return clone;
 };
 Leauge.prototype.playMatches = function() {
-  console.log(this.teams);
+
+  var result;
+  var j = 0, i = 0;
+  for(i; i < this.teams.length; i++){
+  	while(j < this.teams.length){
+   		if(i != j) {
+        result = this.playMatch();
+        this.registerResult(result, this.teams[i], this.teams[j]);
+  		}
+  		j++;
+  	}
+    j = 0;
+  }
 
 };
 Leauge.prototype.registerResult = function(result, homeTeam,awayTeam) {
@@ -60,9 +72,33 @@ Leauge.prototype.playMatch = function(homeMaxGoals, awayMaxGoals) {
   result.awayGoal = Math.floor(Math.random() * (this.awayMaxGoals + 1));
   return result;
 };
-Leauge.prototype.getTableString = function() {
-  var result;
+function sortTeamsByPoints(teams){
 
+}
+Leauge.prototype.getTableString = function(padding) {
+  var copiedArray = this.teams;
+  // //sorting the array with the highest value at top
+  copiedArray.sort(function (a, b) {
+    if (a.points > b.points) {
+        return -1;
+    }
+    if (a.points < b.points) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+
+console.log(copiedArray);
+  var result = "";
+  var i = 0;
+  for(i; i < this.teams.length - 1; i++){
+    result += this.teams[i].toTableRow(padding) + "\n";
+  }
+  result += this.teams[i].toTableRow(padding);
+
+
+  //loopa igenom objektet
   return result;
 };
 

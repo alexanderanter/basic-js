@@ -13,15 +13,17 @@ function Team(teamName) {
    } else {
      throw new Error("NOthing sent!");
    }
-   
+
 }
 
+
 Team.prototype.toTableRow = function(padding) {
+
   var result;
-  this.padding = padding || 25;
+  this.padding = (padding - 2) || 21;
   result = this.name;
 
-  for(var i = 4; i < this.padding; i++) {
+  for(var i = 0; i < this.padding; i++) {
       result += " ";
   }
   result += this.points;
