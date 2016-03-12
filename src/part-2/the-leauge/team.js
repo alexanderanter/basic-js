@@ -13,13 +13,14 @@ function Team(teamName) {
    } else {
      throw new Error("NOthing sent!");
    }
-
+   
 }
 
 Team.prototype.toTableRow = function(padding) {
   var result;
   this.padding = padding || 25;
   result = this.name;
+
   for(var i = 4; i < this.padding; i++) {
       result += " ";
   }

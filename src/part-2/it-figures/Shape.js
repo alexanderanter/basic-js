@@ -46,7 +46,7 @@ Rectangle.prototype.area = function() {
 Rectangle.prototype.circumference = function() {
     return 2 * this.length + 2 * this.height;
 };
-console.log(Ellipse.area);
+
 // Exports
 module.exports = Shape;
 module.exports.Ellipse = Ellipse;
